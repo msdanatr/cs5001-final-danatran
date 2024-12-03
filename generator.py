@@ -111,18 +111,19 @@ def main():
     
     while True:
         try:
-            num_lines = int(input("How many lines would you like your poem to have? It can be 1-3. "))
+            num_lines = int(input("How long would you like your poem to be? It can be 1-3 lines: "))
             if num_lines <= 0:
-                print("Number must be positve!")
+                print("Number must be positive!")
             else:
                 break
         except ValueError:
             print("Please enter a valid number.")
+
     while True:
         poem = generate_poem(nouns, noun2, verbs, adjectives,num_lines)
         print("\nGenerated Poem:\n")
         print(poem)
-
+#regenerate a new poem if user is unhappy with what was generated
         regenerate_option = input("\nWould you like to generate a different poem? (yes/no): ").strip().lower()
         if regenerate_option not in {"yes", "y"}:
             break
