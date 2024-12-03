@@ -47,7 +47,7 @@ def select_word(word_pool, used_words, allow_repeat=False):
 
 
 
-def generate_poem(nouns, noun2, verbs, adjectives):
+def generate_poem(nouns, noun2, verbs, adjectives, num_lines):
     """Generate a poem with 1 to 3 lines, making sense with random word combinations."""
     #define sentence structures that use articles and prepositions
     templates = [
@@ -56,10 +56,8 @@ def generate_poem(nouns, noun2, verbs, adjectives):
         "{adjective} {noun}",
     ]
     
-    #decide how many lines to generate (1 to 3 lines)
-    num_lines = random.randint(1, 3)
-    poem = []
 
+    poem = []
     used_words = set()
 
     for _ in range(num_lines):
@@ -110,11 +108,25 @@ def main():
     if not nouns or not verbs or not adjectives:
         print("Error")
         return
+    
+    while True:
+        try:
+            num_lines = int(input("How many lines would you like your poem to have? It can be 1-3. "))
+            if num_lines <= 0:
+                print("Number must be positve!")
+            else:
+                break
+        except ValueError:
+            print("Please enter a valid number.")
+    while True:
+        poem = generate_poem(nouns, noun2, verbs, adjectives,num_lines)
+        print("\nGenerated Poem:\n")
+        print(poem)
 
-    poem = generate_poem(nouns, noun2, verbs, adjectives)
-    print("\nGenerated Poem:\n")
-    print(poem)
-
+        regenerate_option = input("\nWould you like to generate a different poem? (yes/no): ").strip().lower()
+        if regenerate_option not in {"yes", "y"}:
+            break
+    
     save_option = input("\nWould you like to save this poem? (yes/no): ").strip().lower()
     if save_option in {"yes", "y"}:
         save_poem(poem)
