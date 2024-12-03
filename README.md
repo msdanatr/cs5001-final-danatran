@@ -1,5 +1,6 @@
-"""
+
 Final Project CS 5001 - Dana Tran
+--------
 https://github.com/CS5001-khoury/FinalProjectTemplate/blob/main/instructions/ProjectIdeas.md
 --------
 
@@ -30,4 +31,4 @@ output acceptance criteria:
 3. poem should be able to be saved as a txt file
 
 
-marcela suggests: createrepo,research math law templates flow chart??"""
+marcela suggests: createrepo,research math law templates flow chart??
