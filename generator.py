@@ -89,7 +89,7 @@ def generate_poem(nouns, noun2, verbs, adjectives):
 
 def save_poem(poem, filename="output/poem.txt"):
     """Save generated poem to a text file in the output folder."""
-    main_folder = "/Users/danatran/Documents/Fall 2024 - CS 5001/cs5001-final-project-danatran"
+    main_folder = "/Users/danatran/Documents/Fall 2024 - CS 5001/cs5001-final-danatran"
     output_path = os.path.join(main_folder, filename)
 
     os.makedirs(os.path.dirname(filename), exist_ok=True)
