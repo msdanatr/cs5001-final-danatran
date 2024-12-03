@@ -36,7 +36,7 @@ def select_word(word_pool, used_words, allow_repeat=False):
         available_words = word_pool
 
     if not available_words:
-        return
+        return " "
 
     word = random.choice(available_words)
 
@@ -49,7 +49,7 @@ def select_word(word_pool, used_words, allow_repeat=False):
 
 def generate_poem(nouns, noun2, verbs, adjectives):
     """Generate a poem with 1 to 3 lines, making sense with random word combinations."""
-    # Define sentence structures that use articles and prepositions
+    #define sentence structures that use articles and prepositions
     templates = [
         "{article} {adjective} {noun} {verb}",
         "{noun} {verb} {preposition} {article} {adjective} {noun2}",
