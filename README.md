@@ -1,8 +1,6 @@
 
 Final Project CS 5001 - Dana Tran
 --------
-https://github.com/CS5001-khoury/FinalProjectTemplate/blob/main/instructions/ProjectIdeas.md
---------
 
 
 random poem generator
@@ -32,3 +30,5 @@ output acceptance criteria:
 
 
 marcela suggests: createrepo,research math law templates flow chart??
+https://github.com/CS5001-khoury/FinalProjectTemplate/blob/main/instructions/ProjectIdeas.md
+
